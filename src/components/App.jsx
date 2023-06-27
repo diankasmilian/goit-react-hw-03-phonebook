@@ -54,16 +54,12 @@ class App extends Component {
         contacts: parseContact,
       });
     }
-
-    console.log(contact);
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.contacts !== this.state.contacts) {
       localStorage.setItem(LS_KEY, JSON.stringify(this.state.contacts));
     }
-    console.log(prevState.contacts);
-    console.log(this.state.contacts);
   }
 
   render() {
